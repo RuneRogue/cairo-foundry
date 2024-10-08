@@ -48,7 +48,7 @@ fn remove_dir_all_if_exists(dir: &PathBuf) -> Result<bool, CleanCommandError> {
 			dir: dir.as_path().display().to_string(),
 			err,
 		})?;
-		return Ok(true)
+		return Ok(true);
 	}
 	Ok(false)
 }

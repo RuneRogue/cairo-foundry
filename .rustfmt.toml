@@ -1,7 +1,7 @@
 # Configuration file for Rustfmt
 # https://rust-lang.github.io/rustfmt
 
-version = "Two"
+style_edition = "2021"
 
 # Basic
 hard_tabs = true

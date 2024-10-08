@@ -66,7 +66,7 @@ pub fn compile(path_to_cairo_file: &PathBuf) -> Result<ProgramJson, Error> {
 			Ok(cache) =>
 				if cache.hash == hash {
 					let program_json: ProgramJson = serde_json::from_value(cache.program_json)?;
-					return Ok(program_json)
+					return Ok(program_json);
 				},
 			Err(err) => warn!(
 				"Error while reading cache {}: {err}",
@@ -112,6 +112,6 @@ pub fn compile_cairo_file(path_to_cairo_file: &PathBuf) -> Result<Vec<u8>, Error
 					e
 				)
 			}),
-		))
+		));
 	}
 }

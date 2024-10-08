@@ -15,10 +15,10 @@ use crate::{
 ///
 /// The following custom hints are supported:
 /// - **skip**: Allows skipping certain instructions in the test execution.
-/// - **mock_call**: Simulates a call to another function or contract, enabling isolation
-///   of the unit being tested.
-/// - **expect_revert**: Asserts that a certain condition leads to a revert, allowing
-///   tests to confirm that the correct error handling is in place.
+/// - **mock_call**: Simulates a call to another function or contract, enabling isolation of the
+///   unit being tested.
+/// - **expect_revert**: Asserts that a certain condition leads to a revert, allowing tests to
+///   confirm that the correct error handling is in place.
 ///
 /// # Examples
 ///
@@ -30,7 +30,6 @@ use crate::{
 ///     let hint_processor = setup_hint_processor();
 /// # }
 /// ```
-///
 pub fn setup_hint_processor() -> FunctionLikeHintProcessor {
 	let skip_hint = Rc::new(HintFunc(Box::new(hints::skip)));
 	let mock_call_hint = Rc::new(HintFunc(Box::new(hints::mock_call)));

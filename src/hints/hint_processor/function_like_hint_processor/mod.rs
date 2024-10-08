@@ -133,7 +133,7 @@ impl HintProcessor for FunctionLikeHintProcessor {
 				code: Code::RawCode(hint_code.to_string()),
 				ap_tracking: ap_tracking.clone(),
 				ids_data,
-			}))
+			}));
 		}
 		let name_func = trimmed_hint_code[..index_of_opening_parenthesis].to_string();
 		let list_args = trimmed_hint_code[index_of_opening_parenthesis + 1..]
